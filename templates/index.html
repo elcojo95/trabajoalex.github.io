@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header">
+
+    
+    <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg">
+        Microsoft |
+    </div>
+
+    
+    <nav class="nav">
+        <a href="#">AI</a>
+        <a href="#">Products</a>
+        <a href="#">Solutions</a>
+        <a href="#">Resources</a>
+        <a href="#">Pricing</a>
+    </nav>
+
+    
+    <div class="right">
+
+        
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+        </div>
+
+        {% if session.get('usuario') %}
+            <a href="{{ url_for('logout') }}" class="btn">Cerrar sesión</a>
+        {% else %}
+            <form action="{{ url_for('login') }}">
+                <button class="btn">Sign in</button>
+            </form>
+        {% endif %}
+
+    </div>
+
+</header>
+<main>
+    <div class="microB">
+       <h4>Bring AI into your business processes—practically, responsibly, and at scale <a href=""> Get the e-book</a> </h4>
+    </div>
+
+    <main class="hero">
+
+    <div class="hero-text">
+        <p class="mini">MICROSOFT AI</p>
+
+        <h1>
+            Explore Frontier Transformation —where intelligence meets trust
+        </h1>
+
+        <p class="desc">
+            Discover how Microsoft AI brings intelligence into the flow of work,
+            grounded in your data and built on trust so you can move beyond
+            efficiency to drive growth, innovation, and meaningful outcomes.
+        </p>
+
+        <a href="#" class="btn-main">
+            Get the AI Decision Brief ▶
+        </a>
+    </div>
+
+    <div class="hero-img">
+        <img src="/previw.jpg.jpeg" alt="preview">
+    </div>
+
+</main>
+
+<!-- MENU SECUNDARIO -->
+<div class="subnav">
+    <a href="#" class="active">Products</a>
+    <a href="#">Get insights</a>
+    <a href="#">Built on trust</a>
+    <a href="#">Industry solutions</a>
+    <a href="#">News and insights</a>
+    <a href="#">Customer stories</a>
+    <a href="#">FAQ</a>
+</div>
+
+<!-- SECCION ASK -->
+<section class="ask-section">
+
+    <div class="ask-left">
+        <div class="icon">•••</div>
+        <div>
+            <h2>Ask Microsoft</h2>
+            <p>Have a question about Microsoft AI solutions? Try Ask Microsoft.</p>
+        </div>
+    </div>
+
+    <div class="ask-right">
+        <div class="search">
+            <input type="text" placeholder="Ask about Microsoft AI solutions.">
+            <span class="send">➤</span>
+        </div>
+
+        <div class="quick">
+            <button>What is Frontier Transformation?</button>
+            <button>Can I trust Microsoft AI?</button>
+        </div>
+    </div>
+
+</section>
+<section class="products-section">
+
+    <p class="tag">PRODUCTS</p>
+
+    <h1>
+        AI in the flow of work—built on intelligence and trust
+    </h1>
+
+    <p class="desc">
+        Enrich employee experiences, reshape business processes, and accelerate innovation with Microsoft AI—embedding trusted intelligence into everyday workflows. Move beyond task automation to connect knowledge, improve decisions, and achieve measurable outcomes with enterprise ready AI.
+    </p>
+
+</section>
+
+<div class="contenedor-principal">
+        <div class="tarjeta">
+            <div class="caja-imagen">
+                <img src="/diseño g.jpg.jpeg" alt="Imagen 1">
+            </div>
+            <div class="contenido">
+                <h3>Diseño Web</h3>
+                <p>Estructuras modernas y adaptables para cualquier dispositivo.</p>
+                <button class="boton-accion">Ver Detalles</button>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <div class="caja-imagen">
+                <img src="/marketing.jpg.jpeg" alt="Imagen 2">
+            </div>
+            <div class="contenido">
+                <h3>Marketing</h3>
+                <p>Estrategias digitales para potenciar tu marca personal.</p>
+                <button class="boton-accion">Ver Detalles</button>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <div class="caja-imagen">
+                <img src="/fotografico.jpg.jpeg" alt="Imagen 3">
+            </div>
+            <div class="contenido">
+                <h3>Fotografía</h3>
+                <p>Capturando momentos con la mejor calidad visual posible.</p>
+                <button class="boton-accion">Ver Detalles</button>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <div class="caja-imagen">
+                <img src="/ecommerse.jpg.jpeg" alt="Imagen 4">
+            </div>
+            <div class="contenido">
+                <h3>E-commerce</h3>
+                <p>Tiendas virtuales optimizadas para ventas rápidas.</p>
+                <button class="boton-accion">Ver Detalles</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

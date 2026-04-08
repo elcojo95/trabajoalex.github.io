@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Microsoft – Crear cuenta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/templates/css/register.css">
+   
+
+
+</head>
+<body>
+
+
+  <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
+ 
+  <div class="stars" id="stars">
+    {{ html_stars | safe }}
+  </div>
+
+  
+  <div class="login-card">
+    <div class="logo-area">
+      <div class="ms-logo">
+        <span></span><span></span>
+        <span></span><span></span>
+      </div>
+      <span class="logo-text">Microsoft</span>
+    </div>
+
+    <h1>Crear cuenta</h1>
+    <p class="subtitle">Es gratis y solo toma un minuto.</p>
+
+    {% if message %}
+    <div class="message {% if success %}success{% else %}error{% endif %}">
+      {{ message }}
+    </div>
+    {% endif %}
+
+    {% if not success %}
+    <form method="POST">
+      <div class="name-row">
+        <div class="input-group">
+          <input type="text" id="nombre" name="nombre" placeholder=" " autocomplete="off" />
+          <label for="nombre">Nombre</label>
+        </div>
+        <div class="input-group">
+          <input type="text" id="apellido" name="apellido" placeholder=" " autocomplete="off" />
+          <label for="apellido">Apellido</label>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <input type="email" id="usuario" name="usuario" placeholder=" " autocomplete="off" />
+        <label for="usuario">Correo electrónico</label>
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="contrasena" name="contrasena" placeholder=" " autocomplete="off" />
+        <label for="contrasena">Contraseña</label>
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" placeholder=" " autocomplete="off" />
+        <label for="confirmar_contrasena">Confirmar contraseña</label>
+      </div>
+
+      <button type="submit" class="btn-next">Crear cuenta</button>
+    </form>
+
+    <div class="divider"></div>
+
+    <p class="signup-row">
+      ¿Ya tienes una cuenta? <a href="{{ url_for('login') }}">Iniciar sesión</a>
+    </p>
+    {% else %}
+    <div class="divider"></div>
+
+    <p class="signup-row">
+      <a href="{{ url_for('login') }}">Iniciar sesión</a>
+    </p>
+    {% endif %}
+  </div>
+
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Ayuda y comentarios</a>
+      <a href="#">Términos de uso</a>
+      <a href="#">Privacidad y cookies</a>
+    </div>
+    <p class="footer-note">
+      Usa la exploración privada si este no es tu dispositivo.
+      <a href="#">Más información</a>
+    </p>
+  </footer>
+
+</body>
+</html>
